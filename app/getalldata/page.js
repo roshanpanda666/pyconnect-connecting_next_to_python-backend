@@ -5,7 +5,7 @@ const Page = () => {
   const [todos, setTodos] = useState([]) // store all todos as array
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/")
+    fetch("https://fast-api-1-uh0r.onrender.com/")
       .then(res => res.json())
       .then(data => {
         setTodos(data) // assuming backend sends array

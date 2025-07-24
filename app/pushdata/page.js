@@ -25,7 +25,7 @@ export default function AddTodo() {
 
     //  Push to FastAPI backend here using fetch()
 
-    fetch("http://127.0.0.1:8000/",{
+    fetch("https://fast-api-1-uh0r.onrender.com/",{
         method:"POST",
         headers:{
             "content-type":"application/json"

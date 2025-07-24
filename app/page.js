@@ -5,7 +5,7 @@ const Page = () => {
   const [todo, setTodo] = useState(null)
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/latest")
+    fetch("https://fast-api-1-uh0r.onrender.com/latest")
       .then(res => res.json())
       .then(data => {
         setTodo(data)
