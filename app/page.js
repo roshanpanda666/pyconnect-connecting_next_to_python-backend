@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import Navbar from './components/nav'
 
 const Page = () => {
   const [todo, setTodo] = useState(null)
@@ -16,7 +17,12 @@ const Page = () => {
   }, [])
 
   return (
-    <div className="p-4 flex flex-col items-center text-lg font-medium">
+    <>
+
+    <div>
+      <Navbar></Navbar>
+    </div>
+          <div className="p-4 flex flex-col items-center text-lg font-medium">
       {todo ? (
         <div className="bg-black border-2 border-green-600 p-6 rounded-2xl shadow-xl w-[90%] max-w-md">
           <h2 className="text-2xl font-bold mb-2">📝 {todo.title}</h2>
@@ -29,6 +35,8 @@ const Page = () => {
         <p>Loading latest todo...</p>
       )}
     </div>
+    </>
+    
   )
 }
 

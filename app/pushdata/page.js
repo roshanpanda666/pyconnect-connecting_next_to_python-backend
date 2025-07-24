@@ -1,5 +1,6 @@
 'use client';
 import { useRef } from 'react';
+import Navbar from '../components/nav';
 
 export default function AddTodo() {
   const titleRef = useRef(null);
@@ -49,7 +50,12 @@ export default function AddTodo() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4">
+    <>
+
+    <div>
+      <Navbar></Navbar>
+    </div>
+          <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4">
       <form
         onSubmit={handleSubmit}
         className="bg-zinc-900 border-2 border-green-400 rounded-2xl shadow-lg p-8 w-full max-w-md"
@@ -98,5 +104,7 @@ export default function AddTodo() {
         </button>
       </form>
     </div>
+    </>
+    
   );
 }

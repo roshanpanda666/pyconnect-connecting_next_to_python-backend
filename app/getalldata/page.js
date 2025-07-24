@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import Navbar from '../components/nav'
 
 const Page = () => {
   const [todos, setTodos] = useState([]) // store all todos as array
@@ -16,7 +17,11 @@ const Page = () => {
   }, [])
 
   return (
-    <div className="p-4 flex flex-wrap items-center text-lg font-medium">
+    <>
+    <div>
+      <Navbar></Navbar>
+    </div>
+          <div className="p-4 flex flex-wrap items-center text-lg font-medium">
       {todos.length > 0 ? (
         todos.map((todo, index) => (
           <div
@@ -38,6 +43,8 @@ const Page = () => {
         <p>Loading all todos...</p>
       )}
     </div>
+    </>
+    
   )
 }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Navbar from '../components/nav';
 
 export default function Home() {
   const titleRef = useRef(null);
@@ -36,7 +37,12 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 space-y-6 bg-black">
+    <>
+
+    <div>
+      <Navbar></Navbar>
+    </div>
+            <main className="flex min-h-screen flex-col items-center justify-center p-8 space-y-6 bg-black">
       <h1 className="text-3xl font-bold mb-4 text-green-400">🔄 Update Todo</h1>
 
       <input
@@ -71,5 +77,7 @@ export default function Home() {
         Update Todo 🚀
       </button>
     </main>
+    </>
+    
   );
 }
